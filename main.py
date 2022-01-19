@@ -79,7 +79,8 @@ def is_bitlink(token, link):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Программа выдает короткие ссылки bit.ly и статистику кликов по ним")
+        description=(
+            "Программа выдает короткие ссылки bit.ly и их статистику кликов"))
     parser.add_argument("link", help="Ваша ссылка")
     args = parser.parse_args()
 
