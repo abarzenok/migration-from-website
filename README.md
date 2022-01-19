@@ -39,7 +39,8 @@ pip install -r requirements.txt
 
 ### Решение проблем
 В некоторых случаях, программа может вернуть ошибку. Например:
-```(venv) C:\Users\Dev>python main.py notalink
+```
+(venv) C:\Users\Dev>python main.py notalink
 Не удалось обработать ссылку "notalink". Ответ от bit.ly:
  400 Client Error: Bad Request for url: https://api-ssl.bitly.com/v4/shorten
 ```
