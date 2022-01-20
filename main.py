@@ -78,8 +78,8 @@ def main():
     load_dotenv()
     bitly_token = os.getenv('BITLY_API_TOKEN')
     parser = argparse.ArgumentParser(
-        description=(
-            "Программа выдает короткие ссылки bit.ly и их статистику кликов"))
+        description="Программа выдает ссылки bit.ly и статистику кликов по ним"
+    )
     parser.add_argument("link", help="Ваша ссылка")
     args = parser.parse_args()
 
