@@ -31,7 +31,7 @@ pip install -r requirements.txt
 (venv) C:\Users\Dev>python main.py https://devman.org
 Битлинк: bit.ly/3fE8ryb
 ```
-Если ссылка bit.ly и у токена есть необходимые права - будет отображена статистика кликов за все время.
+Если ссылка [bit.ly](http://bit.ly) и у токена есть необходимые права - будет отображена статистика кликов за все время.
 ```commandline
 (venv) C:\Users\Dev>python main.py bit.ly/3fE8ryb
 Количество кликов: 1
