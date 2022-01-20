@@ -4,8 +4,6 @@ from urllib.parse import urlparse
 from dotenv import load_dotenv
 import requests
 
-BITLY_TOKEN = os.getenv('BITLY_API_TOKEN')
-
 
 def extract_from_link(link):
     link_parts = urlparse(link)
@@ -78,6 +76,7 @@ def is_bitlink(token, link):
 
 def main():
     load_dotenv()
+    bitly_token = os.getenv('BITLY_API_TOKEN')
     parser = argparse.ArgumentParser(
         description=(
             "Программа выдает короткие ссылки bit.ly и их статистику кликов"))
@@ -87,11 +86,11 @@ def main():
     url = args.link
 
     try:
-        if is_bitlink(BITLY_TOKEN, url):
-            clicks_count = count_clicks(BITLY_TOKEN, url)
+        if is_bitlink(bitly_token, url):
+            clicks_count = count_clicks(bitly_token, url)
             print("Количество кликов:", clicks_count)
         else:
-            bitlink = shorten_link(BITLY_TOKEN, url)
+            bitlink = shorten_link(bitly_token, url)
             print("Битлинк:", bitlink)
     except requests.exceptions.HTTPError as error:
         print(f"Не удалось обработать ссылку \"{url}\". Ответ от bit.ly:\n",
