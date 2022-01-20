@@ -93,8 +93,10 @@ def main():
             bitlink = shorten_link(bitly_token, url)
             print("Битлинк:", bitlink)
     except requests.exceptions.HTTPError as error:
-        print(f"Не удалось обработать ссылку \"{url}\". Ответ от bit.ly:\n",
-               error)
+        print(
+            f"Не удалось обработать ссылку \"{url}\". Ответ от bit.ly:\n",
+            error
+        )
 
 
 if __name__ == '__main__':
