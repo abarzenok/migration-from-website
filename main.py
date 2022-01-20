@@ -3,7 +3,6 @@ import os
 from urllib.parse import urlparse
 from dotenv import load_dotenv
 import requests
-load_dotenv()
 
 BITLY_TOKEN = os.getenv('BITLY_API_TOKEN')
 
@@ -78,6 +77,7 @@ def is_bitlink(token, link):
 
 
 def main():
+    load_dotenv()
     parser = argparse.ArgumentParser(
         description=(
             "Программа выдает короткие ссылки bit.ly и их статистику кликов"))
